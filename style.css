@@ -1,0 +1,570 @@
+/* Para evitar problemas com caracteres*/
+@charset "UTF-8";
+
+/* Importar Font*/
+@font-face {
+    font-family: 'FontHeaderName';
+    src: url("/Projeto/fonts/segoesc.ttf");
+}
+
+@font-face {
+    font-family: 'FontHtml';
+    src: url("/Projeto/fonts/Roboto-Medium.ttf");
+}
+
+/* Ajustar o layout do grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*  grid-template-columns: auto auto auto; */
+    grid-gap: 15px;
+    margin: auto auto auto auto;
+    font-family: 'FontHtml', sans-serif;
+}
+
+body {
+    color: white;
+    background-color: #343a40;
+    font-family: 'FontHtml', sans-serif;
+    font: 15px sans-serif;
+    padding: 10px;
+}
+
+.header {
+    color: white;
+    background-color: #343a40;
+    font-family: 'FontHtml', sans-serif;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+    text-align: left;
+    padding: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.455);
+}
+
+.header p {
+    font-family: 'FontHeaderName', sans-serif;
+}
+
+/* Login */
+input[type=text],
+input[type=email],
+input[type=password] {
+    color: black;
+    width: 200px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+button {
+    color: white;
+    background-color: #3b536c;
+    width: 200px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.login-container {
+    display: grid;
+    text-align: center;
+}
+
+#label {
+    width: 200px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+#input {
+    width: 200px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.logout {
+    margin: 10px;
+}
+
+#logout-button {
+    display: grid;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
+
+/* New user form */
+#message {
+    color: white;
+    background: #3b536c30;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#message p {
+    padding: 15px 35px;
+    font-size: 15px;
+}
+
+/* Adicionar texto verde quando requerimentos estão corretos */
+.valid {
+    color: rgb(89, 112, 89);
+}
+
+/* Adicionar texto amarelo quando requerimentos estão incorretos */
+.invalid {
+    color: rgb(157, 174, 60);
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "\2713";
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "\2716";
+}
+
+/* Tabelas */
+.table-cliente{
+    padding: 10px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-cliente th, td{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.th-cliente {
+    padding: 10px;
+    text-align: left;
+    font: 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-cliente tr:hover{
+    background-color: #343a40;
+    opacity: 0.8;
+}
+
+/* Links */
+a:link,
+a:visited {
+    color: white;
+    background-color: #343a40;
+    padding: 20px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    opacity: 0.8;
+}
+
+/* Listas -> Menu */
+nav#menu ul {
+    color: white;
+    background-color: #343a40;
+    list-style-type: none;
+    float: left;
+    width: 200px;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+li a {
+    color: white;
+    background-color: #343a40;
+    transition: background-color 2s;
+    padding: 20px 25px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+li a:hover:not(.active) {
+    color: #343a40;
+    background-color: rgba(230, 230, 230, 0.381);
+    border-radius: 5px;
+}
+
+/* Dropdown -> Menu  */
+.dropdown {
+    width: 250px;
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    color: white;
+    background-color: #3b536c;
+    min-width: 250px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 25px;
+    display: inline-block;
+}
+
+.dropdown-content a:hover {
+    color: #343a40;
+    background-color: rgba(230, 230, 230, 0.381);
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
+/* Footer */
+.footer {
+    color: white;
+    background-color: #343a40;
+    padding: 20px;
+    font-family: 'FontHeaderName', sans-serif;
+    text-align: center;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
+
+    .header {
+        font-size: 1.2em;
+    }
+
+    .login-container {
+        padding: 8px;
+    }
+
+    .dropdown-content {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+/* Sidebar -> Menu */
+.sidebar {
+    background-color: #3b536c;
+    height: 100%;
+    width: 0;
+    /* Alterado com JS */
+    position: fixed;
+    z-index: 1;
+    /* Posição -> Top */
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    /* Desabilita scroll horizontal */
+    padding-top: 67px;
+    transition: 0.5s;
+    /* Efeito de transição do slide */
+}
+
+/* Sidebar links */
+.sidebar a {
+    color: white;
+    background-color: #3b536c;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: left;
+    padding: 30px 30px 30px 30px;
+    display: block;
+    transition: 0.5s;
+}
+
+.openbtn {
+    font-size: 20px;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+section {
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.455);
+    width: 700px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#grafico {
+    background-color: rgba(230, 230, 230, 0.381);
+    width: 550px;
+    height: 550px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#grafico2 {
+    background-color: rgba(230, 230, 230, 0.381);
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#grafico3 {
+    background-color: rgba(230, 230, 230, 0.381);
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.rowMid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: 25px;
+}
+
+.columnMid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.rowRight {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 100px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.columnRight {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+
+.search-container {
+    text-align: center;
+    margin: auto;
+}
+
+.search-box {
+    color: #343a40;
+    background-color: white;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Ajusta o tamanho width */
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+}
+
+/* Calendario */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --calendar-bg-color: #262829;
+    --calendar-font-color: #FFF;
+    --weekdays-border-bottom-color: #404040;
+    --calendar-date-hover-color: #505050;
+    --calendar-current-date-color: #1b1f21;
+    --calendar-today-color: linear-gradient(to bottom, #a1b0b7, #2196f3);
+    --calendar-today-innerborder-color: transparent;
+    --calendar-nextprev-bg-color: transparent;
+    --next-prev-arrow-color: #FFF;
+    --calendar-border-radius: 16px;
+    --calendar-prevnext-date-color: #484848
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.calendar {
+    scale: 55%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    position: relative;
+    margin: auto;
+    max-width: 600px;
+    min-width: 320px;
+    background: var(--calendar-bg-color);
+    color: var(--calendar-font-color);
+    box-sizing: border-box;
+    overflow: hidden;
+    font-weight: normal;
+    border-radius: var(--calendar-border-radius);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.455);
+}
+
+.calendar-inner {
+    padding: 10px 10px;
+}
+
+.calendar .calendar-inner .calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar .calendar-inner .calendar-body div {
+    padding: 2px;
+    min-height: 20px;
+    line-height: 20px;
+    border: 1px solid transparent;
+    margin: 10px 2px 0px;
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n+7) {
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--weekdays-border-bottom-color);
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n+7):hover {
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--weekdays-border-bottom-color);
+}
+
+.calendar .calendar-inner .calendar-body div>a {
+    color: var(--calendar-font-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar .calendar-inner .calendar-body div:hover {
+    border: 1px solid var(--calendar-date-hover-color);
+    border-radius: 4px;
+}
+
+.calendar .calendar-inner .calendar-body div.empty-dates:hover {
+    border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.calendar .calendar-inner .calendar-today-date {
+    display: grid;
+    text-align: center;
+    cursor: pointer;
+    margin: 3px 0px;
+    background: var(--calendar-current-date-color);
+    padding: 8px 0px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month {
+    display: flex;
+    min-width: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next {
+    text-align: right;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-year-label,
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today {
+    background: var(--calendar-today-color);
+    border-radius: 4px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today:hover {
+    border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today a {
+    outline: 2px solid var(--calendar-today-innerborder-color);
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a,
+.calendar .calendar-inner .calendar-controls .calendar-prev a {
+    color: var(--calendar-font-color);
+    font-family: arial, consolas, sans-serif;
+    font-size: 26px;
+    text-decoration: none;
+    padding: 4px 12px;
+    display: inline-block;
+    background: var(--calendar-nextprev-bg-color);
+    margin: 10px 0 10px 0;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a svg,
+.calendar .calendar-inner .calendar-controls .calendar-prev a svg {
+    height: 20px;
+    width: 20px;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a svg path,
+.calendar .calendar-inner .calendar-controls .calendar-prev a svg path {
+    fill: var(--next-prev-arrow-color);
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates,
+.calendar .calendar-inner .calendar-body .next-dates {
+    color: var(--calendar-prevnext-date-color);
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates:hover,
+.calendar .calendar-inner .calendar-body .next-dates:hover {
+    border: 1px solid transparent;
+    pointer-events: none;
+}
