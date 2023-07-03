@@ -59,6 +59,12 @@ include 'includes/script.php';
     </tbody>
   </table>
 </div>
+<!-- ASIDE -->
+<aside>
+  <?php
+  include 'includes/aside.php';
+  ?>
+</aside>
 <?php
 include 'includes/footer.php';
 ?>

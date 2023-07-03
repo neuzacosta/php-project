@@ -10,7 +10,7 @@ include 'includes/script.php';
   <p> <img src="/Projeto/img/nc.ico" width="25" height="25"> ncosta</p>
 </header>
 <div class="grid-container">
-  <!-- LEFTSIDE -->
+  <!-- SIDEBAR -->
   <?php
   include 'includes/sidebar.php';
   ?>
@@ -38,10 +38,10 @@ include 'includes/script.php';
       </div>
     </section>
   </div>
-  <!-- RIGHTSIDE -->
+  <!-- ASIDE -->
   <div class="col-md">
     <?php
-    include 'includes/rightside.php';
+    include 'includes/aside.php';
     ?>
   </div>
 </div>
