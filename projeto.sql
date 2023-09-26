@@ -88,7 +88,6 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `psw`, `email`) VALUES
 (2, 'admin', 'Admin1988', 'admin1988@gmail.com'),
 (3, 'tester', 'Tester1234', 'tester@gmail.com'),
-(4, 'neuza', 'NEUZAcosta1988', 'n.costa@gmail.com');
 
 --
 -- Índices para tabelas despejadas
